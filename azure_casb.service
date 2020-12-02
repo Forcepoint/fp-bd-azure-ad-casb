@@ -1,0 +1,10 @@
+[Unit]
+Description=Forcepoint CASB and Azure AD
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/var/azure_casb/azure_casb run --config /var/azure_casb/azure_casb.yml
+
+[Install]
+WantedBy=multi-user.target

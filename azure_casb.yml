@@ -1,0 +1,24 @@
+#Azure Risk Level Groups separated by comma
+AZURE_GROUPS_NAME: risk_level_1,risk_level_2,risk_level_3,risk_level_4,risk_level_5
+#Map a risk score range to a Risk Level Group
+MAP_RISK_SCORE:
+  - 100-200: risk_level_1
+  - 201-400: risk_level_2
+  - 401-500: risk_level_3
+  - 501-1000: risk_level_4
+  - 1001+: risk_level_5
+#risk Score URL. DO NOT CHANGE THIS
+RISK_SCORE_URL: https://my.skyfence.com/cm/rs/0/human_risk/accounts/reports/csv?search=%2BriskScore%3A(%22%5B1%20TO%20*%5D%22)&sortBy=riskScore&sortDirection=DESC
+#Your Forcepoint CASB instance username
+CASB_USER_NAME: INSERT_YOUR_FORCEPOINT_CASB_USERNAME_HERE
+#Your Forcepoint CASB instance password
+CASB_PASSWORD: INSERT_YOUR_FORCEPOINT_CASB_PASSWORD_HERE
+AZURE_ADMIN_LOGIN_NAME: INSERT_YOUR_AZURE_ADMINSTRATOR_USERNAME_HERE
+AZURE_ADMIN_LOGIN_PASSWORD: INSERT_YOUR_AZURE_ADMINSTRATOR_PASSWORD_HERE
+
+# logs output format as json
+LOGGER_JSON_FORMAT: false
+#Terminate user's active session if the user's risk level group is been changed
+TERMINATE_USER_ACTIVE_SESSION: true
+#Download the risk score from Forcepoint CASB every 'RISK_MANAGER_INTERVAL_TIME' minutes
+RISK_MANAGER_INTERVAL_TIME: 10
